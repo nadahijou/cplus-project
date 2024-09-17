@@ -1,16 +1,35 @@
-To get started with C++, first, install the language on your system. 
-On Windows, download and install Microsoft Visual Studio, selecting the “Desktop development with C++” workload. 
-For macOS, install Xcode from the App Store and then use Terminal to install Xcode command line tools with the command xcode-select --install. 
-On Linux, use the terminal to install the GCC compiler with sudo apt install g++, or Clang with sudo apt install clang. C++ does not come with a single recommended programming environment; however, popular choices include Microsoft Visual Studio for Windows, CLion for cross-platform development, Code::Blocks for a simple IDE, and Eclipse CDT for an open-source option. 
-I selected C++  because its another famous program. 
-To run C++ programs, open your command line or terminal, navigate to your project directory, compile your program with g++ -o hello hello.cpp or clang++ -o hello hello.cpp, and then execute it with ./hello on Linux/macOS or hello.exe on Windows. 
-Comments in C++ can be written using // for single-line comments and /* ... */ for multi-line comments, allowing you to document your code clearly and effectively.
-
-
 #include <iostream>  // Include the iostream library for input/output
+
+// Instructions to get started with C++ on macOS using VSCode:
+// 1. **Install Visual Studio Code**:
+//    - Download and install [Visual Studio Code](https://code.visualstudio.com/).
+
+// 2. **Install Xcode Command Line Tools**:
+//    - Open Xcode from the App Store, and then install the command line tools by running `xcode-select --install` in the Terminal.
+
+// 3. **Install the C++ Extension for VSCode**:
+//    - Open VSCode, go to the Extensions view by clicking the square icon on the sidebar, search for "C++", and install the C++ extension by Microsoft.
+
+// 4. **Write and Run Your Program**:
+//    - Use the following C++ code to print "Hello, World!" to the console:
+//      ```cpp
+//      #include <iostream>  // Include the iostream library for input/output
+//      
+//      int main() {          // Main function where execution begins
+//          std::cout << "Hello, World!" << std::endl;  // Print Hello, World! to the console
+//          return 0;         // Return 0 to indicate successful execution
+//      }
+//      ```
+
+//    - To compile and run your program:
+//      - Open VSCode, and use the integrated terminal to navigate to your project directory.
+//      - Compile the program with `g++ -o hello hello.cpp` or `clang++ -o hello hello.cpp`.
+//      - Execute it with `./hello` in the integrated terminal.
+
+// 5. **Commenting**:
+//    - Use `//` for single-line comments and `/* ... */` for multi-line comments to document your code effectively.
 
 int main() {          // Main function where execution begins
     std::cout << "Hello, World!" << std::endl;  // Print Hello, World! to the console
     return 0;         // Return 0 to indicate successful execution
 }
-
