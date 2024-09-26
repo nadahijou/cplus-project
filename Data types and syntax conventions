@@ -1,0 +1,81 @@
+Naming
+C++ is case-sensitive
+Variable names in C++ can contain alphanumeric characters and the underscore (_) character. It is common to write variable names in snake_case or camelCase, depending on the coding convention.
+A variable cannot start with a number.
+Class names are typically written in CamelCase (community standard).
+Function names are written in camelCase or snake_case based on convention.
+
+Keywords
+In C++, you cannot use reserved keywords for variable names or identifiers. Some of the most common keywords include:
+arduino
+
+int, double, char, class, public, private, protected, if, else, while, for, return, const, new, delete, true, false, void
+
+These keywords have special meaning in C++ and should not be used as variable names.
+
+Types
+Creating variables:
+
+int:
+int var = 10;
+
+string (requires #include <string>):
+std::string myString = "Hello World";
+
+
+floating-point:
+float floatTest = 0.5f;
+
+boolean:
+bool boolTest = true;
+
+array: 
+int digits[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+unordered_map:
+std::unordered_map<std::string, std::string> dictionary = {{"one", "mot"}, {"two", "hai"}, {"three", "ba"}};
+std::cout << dictionary["one"] << std::endl;
+
+Dynamic vs Static Typing
+
+C++ is statically typed: You need to specify the type when declaring a variable. 
+int x = 7;
+x = "hello";  // This will throw an error in C++
+
+Mutable and Immutable Variables
+
+Mutable: Arrays, strings (with std::string), vectors (mutable elements, not the structure itself).
+Immutable: Variables declared with const. 
+const int immutableInt = 42;
+
+Explicit vs Implicit Type Conversion
+In C++, type conversion can happen both implicitly and explicitly.
+
+Explicit conversion:
+int var = 25;
+std::string myString = "hello";
+std::cout << std::to_string(var) + myString << std::endl;  // Prints 25hello
+
+
+Implicit conversion: In C++, certain conversions happen automatically.   
+int a = 42;
+double b = a;  // Implicit conversion from int to double
+
+Operators
+Arithmetic Operators: +, -, *, /, %
+Comparison Operators: ==, !=, >, <, >=, <=
+Assignment Operators: =, +=, -=, *=, /=, %=
+Logical Operators: &&, ||, !
+Bitwise Operators: &, |, ^, <<, >>
+
+Addresses and Binding
+In C++, variables are bound to specific memory addresses, and pointers can be used to reference and manipulate these addresses.
+
+Memory addresses and references:
+
+int x = 10;
+int& ref = x;  // ref is a reference to x
+std::cout << &x << std::endl;  // Prints the memory address of x
+std::cout << &ref << std::endl;  // Prints the same memory address as x
+
+In C++, variables store their own copies unless you explicitly use pointers or references to share memory addresses between them.
