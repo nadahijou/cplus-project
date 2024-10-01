@@ -1,0 +1,115 @@
+Function that multiplies two numbers and returns the output:
+
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+
+
+Recursive function for factorial calculation:
+
+
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+
+Function that splits a string into two:
+
+std::pair<std::string, std::string> splitString(const std::string& str, int position) {
+    std::string firstPart = str.substr(0, position);
+    std::string secondPart = str.substr(position);
+    return std::make_pair(firstPart, secondPart);
+}
+
+
+
+Testing pass-by-reference vs. pass-by-value:
+
+void modifyValue(int a) {  // Pass-by-value
+    a = 10;
+}
+
+void modifyReference(int &a) {  // Pass-by-reference
+    a = 10;
+}
+
+
+Example of Calling Functions:
+
+int main() {
+    // Multiplication
+    int resultMultiply = multiply(3, 4);
+
+    // Factorial
+    int resultFactorial = factorial(5);
+
+    // String splitting
+    std::pair<std::string, std::string> splitResult = splitString("hello world", 5);
+
+    // Pass-by-value vs. pass-by-reference
+    int value = 5;
+    modifyValue(value);  // value remains unchanged
+    modifyReference(value);  // value changes to 10
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function declaration syntax:
+Functions are declared in C++ with the parameter list enclosed in parenthesis, the function name, and a return type.
+As an illustration, the function declared by int multiply(int a, int b) takes two integer parameters and returns an integer.
+
+Placement of functions in the code: Functions must either be declared at the beginning of the code via a function prototype, or they must be defined before they are called. This guarantees that before the function is utilized in the main program, the compiler is aware of its existence.
+
+Functions that call themselves: C++ allows for recursion, which allows a function to call itself. For problems like factorial or Fibonacci sequence calculations, recursion is frequently utilized.
+
+numerous parameter acceptance: C++ functions provide the acceptance of numerous parameters of various types. The same function name can accommodate various types or quantities of parameters by using overloading.
+
+Returning more than one value from a function is not directly supported by C++; however, you can utilize methods like returning a std::pair or std::tuple. Direct variable modification using pass-by-reference is an additional method.
+
+Comparing pass-by-value and pass-by-reference, C++ employs the latter by default, which means the function receives a copy of the argument. An ampersand (&) denotes pass-by-reference, which is used to change the argument.
+
+Variable memory organization: Dynamically allocated variables live on the heap, whereas local variables are kept on the stack. Additionally, parameters that are supplied to functions are kept on the stack.
+
+Scoping guidelines: Block scoping is a feature of C++, which restricts access to variables defined inside functions and code blocks to that block. When the block is exited, these variables' lifetimes come to an end.
+
+
+Side-effects and guardrails: C++ permits side effects, where functions can affect the state of variables beyond their scope via references or pointers. Nonetheless, unintentional side effects can be reduced with proper programming techniques and the use of const.
+
+Additional pertinent function aspects: C++ functions support overloading, which allows you to have many instances of a function with distinct argument lists.
+
+Lambda functions and inline functions, which can enhance code performance, are also supported by C++.
