@@ -90,8 +90,12 @@ int main() {
 
 
 Function declaration syntax:
-Functions are declared in C++ with the parameter list enclosed in parenthesis, the function name, and a return type.
+The syntax for a function declaration is: return_type function_name(parameter_list); In this example, int is the return type of the function, add is the name of the function, and (int x, int y) is the parameter list that specifies two integer parameters called “x” and “y.”
 As an illustration, the function declared by int multiply(int a, int b) takes two integer parameters and returns an integer.
+
+-https://blog.hubspot.com/website/call-a-function-in-c#:~:text=C%2B%2B%20Function%20Declarations%20%26%20Definitions&text=The%20syntax%20for%20a%20function,x”%20and%20“y.”
+
+
 
 Placement of functions in the code: Functions must either be declared at the beginning of the code via a function prototype, or they must be defined before they are called. This guarantees that before the function is utilized in the main program, the compiler is aware of its existence.
 
