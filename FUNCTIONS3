@@ -60,6 +60,41 @@ int main() {
 }
 
 
+SECOND EXAMPLE 
+
+#include <iostream>
+#include <string>
+#include <utility> // For std::pair
+
+// Function to multiply two integers
+int multiply(int a, int b) {
+    return a * b;
+}
+
+// Recursive function to calculate factorial
+int factorial(int n) {
+    return (n <= 1) ? 1 : n * factorial(n - 1);
+}
+
+// Function to split a string into two parts
+std::pair<std::string, std::string> splitString(const std::string& str, int position) {
+    return std::make_pair(str.substr(0, position), str.substr(position)); // Directly return the pair
+}
+
+// Main function to test the above functions
+int main() {
+    std::cout << "Multiply: " << multiply(3, 4) << std::endl; // Print multiplication result
+    std::cout << "Factorial: " << factorial(5) << std::endl; // Print factorial result
+
+    // String splitting
+    std::pair<std::string, std::string> splitResult = splitString("hello", 2); // Specify type explicitly
+    std::cout << "Split: " << splitResult.first << ", " << splitResult.second << std::endl; // Print split result
+
+    return 0; // Indicate that the program ended successfully
+}
+
+
+
 
 
 
