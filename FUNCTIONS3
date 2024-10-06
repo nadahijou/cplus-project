@@ -131,24 +131,36 @@ As an illustration, the function declared by int multiply(int a, int b) takes tw
 -https://blog.hubspot.com/website/call-a-function-in-c#:~:text=C%2B%2B%20Function%20Declarations%20%26%20Definitions&text=The%20syntax%20for%20a%20function,x”%20and%20“y.”
 
 
+Write-up Questions:
+1. What is the syntax for declaring a function in your language?
+In C++, a function is declared by specifying the return type, followed by the function name and parameters in parentheses.
 
-Placement of functions in the code: Functions must either be declared at the beginning of the code via a function prototype, or they must be defined before they are called. This guarantees that before the function is utilized in the main program, the compiler is aware of its existence.
+ For example: int add(int a, int b) { return a + b; }.
 
-Functions that call themselves: C++ allows for recursion, which allows a function to call itself. For problems like factorial or Fibonacci sequence calculations, recursion is frequently utilized.
+2. Are there any rules about where the function has to be placed in your code file so that it can run?
+Functions must be declared (either defined or prototyped) before they are called in the code. This means you can place function definitions before or after the main function, but you must declare them before any calls.
 
-numerous parameter acceptance: C++ functions provide the acceptance of numerous parameters of various types. The same function name can accommodate various types or quantities of parameters by using overloading.
+3. Does your language support recursive functions?
+Yes, C++ supports recursive functions, allowing functions to call themselves. This is useful for solving problems that can be broken down into smaller subproblems, like calculating factorials.
 
-Returning more than one value from a function is not directly supported by C++; however, you can utilize methods like returning a std::pair or std::tuple. Direct variable modification using pass-by-reference is an additional method.
+4. Can functions in your language accept multiple parameters? Can they be of different data types?
+C++ functions can accept multiple parameters, and these parameters can be of different data types. For example, a function can take an int, a double, and a string as parameters.
 
-Comparing pass-by-value and pass-by-reference, C++ employs the latter by default, which means the function receives a copy of the argument. An ampersand (&) denotes pass-by-reference, which is used to change the argument.
+5. Can functions in your language return multiple values at the same time? How is that implemented? If not, are there ways around that problem? What are they?
+C++ does not support returning multiple values directly; however, this can be achieved using structures, classes, or std::tuple. By using these data structures, multiple values can be grouped together and returned as a single entity.
 
-Variable memory organization: Dynamically allocated variables live on the heap, whereas local variables are kept on the stack. Additionally, parameters that are supplied to functions are kept on the stack.
+6. Is your language pass-by reference or value? Check your code against outside sources in case there is anything tricky going on (like in Perl).
+C++ primarily uses pass-by-value for basic types, meaning a copy of the variable is passed to functions. However, C++ also supports pass-by-reference using the & operator, allowing functions to modify the original variable.
 
-Scoping guidelines: Block scoping is a feature of C++, which restricts access to variables defined inside functions and code blocks to that block. When the block is exited, these variables' lifetimes come to an end.
+7. Where are the arguments, parameters, and local variables stored (value-on-stack, ref-to-heap-on stack) during execution?
+In C++, arguments and local variables are typically stored on the stack. If a function takes a reference or a pointer, the address of the variable may be stored, which refers to a location on the heap if the variable itself is heap-allocated.
 
+8. What are the scoping rules in your language (visibility and lifetime of variables before, during, and after code blocks)?
+C++ uses lexical scoping, meaning that the visibility of variables is determined by their location in the source code. Local variables exist within the block they are defined in and are destroyed when the block exits.
 
-Side-effects and guardrails: C++ permits side effects, where functions can affect the state of variables beyond their scope via references or pointers. Nonetheless, unintentional side effects can be reduced with proper programming techniques and the use of const.
+9. Are side effects possible? Are there guard rails against side effects?
+Yes, side effects are possible in C++, especially when functions modify global variables or passed-by-reference parameters. While there are no strict guardrails, best practices encourage minimizing side effects to enhance code clarity and maintainability.
 
-Additional pertinent function aspects: C++ functions support overloading, which allows you to have many instances of a function with distinct argument lists.
+10. Where are local variable values stored? (on the stack? On the heap?)
+Local variable values in C++ are stored on the stack. This storage method ensures efficient allocation and automatic deallocation when the function exits.
 
-Lambda functions and inline functions, which can enhance code performance, are also supported by C++.
