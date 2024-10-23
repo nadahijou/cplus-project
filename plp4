@@ -1,7 +1,7 @@
 1. Boolean values in C++
 
 C++ uses true and false as boolean values. true is equivalent to 1, and false is equivalent to 0.
-
+___________________________________________________________________________________________________
 2. Conditional statements in C++
 
 C++ supports:
@@ -10,11 +10,11 @@ if/else
 else if (there is no elif)
 switch-case
 C++ doesn't have unique conditional statements like Perl's unless. It sticks to the standard use of if and else.
-
+___________________________________________________________________________________________________
 3. Delimiting code blocks in C++
 
 Code blocks in C++ are delimited using curly braces {}. If a condition block contains only a single statement, the braces are optional but should be used for clarity and to prevent potential logical errors.
-
+___________________________________________________________________________________________________
 4. Short-circuit evaluation in C++
 
 C++ uses short-circuit evaluation:
@@ -22,4 +22,106 @@ C++ uses short-circuit evaluation:
 && (logical AND) short-circuits if the first condition is false.
 || (logical OR) short-circuits if the first condition is true.
 
+___________________________________________________________________________________________________
+Here Are Examples of this:
 
+
+------- One-condition if/else statement------
+#include <iostream>
+using namespace std;
+
+int main() {
+    bool x = true;
+
+    if (x) {
+        cout << "x is true" << endl;
+    } else {
+        cout << "x is false" << endl;
+    }
+
+    return 0;
+}
+
+
+-------Multi-condition if/else statement------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 5, y = 8;
+
+    if (x > 0 && y < 10) {
+        cout << "x is greater than 0 and y is less than 10" << endl;
+    } else {
+        cout << "Conditions are not met" << endl;
+    }
+
+    return 0;
+}
+
+
+
+-------if/elif/else statements (C++ uses else if)-------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 3;
+
+    if (x > 5) {
+        cout << "x is greater than 5" << endl;
+    } else if (x == 3) {
+        cout << "x is equal to 3" << endl;
+    } else {
+        cout << "x is less than 3" << endl;
+    }
+
+    return 0;
+}
+
+
+
+----Short-circuit logic--------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 5;
+    bool result = (x > 0) && (x / 0 == 0);  // The second condition is not evaluated due to short-circuiting
+
+    cout << "Short-circuit logic worked!" << endl;
+
+    return 0;
+}
+
+
+
+
+-----Switch-case statement------
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 2;
+
+    switch (x) {
+        case 1:
+            cout << "x is 1" << endl;
+            break;
+        case 2:
+            cout << "x is 2" << endl;
+            break;
+        case 3:
+            cout << "x is 3" << endl;
+            break;
+        default:
+            cout << "x is something else" << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+-------------------------------------
