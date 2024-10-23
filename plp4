@@ -1,0 +1,25 @@
+1. Boolean values in C++
+
+C++ uses true and false as boolean values. true is equivalent to 1, and false is equivalent to 0.
+
+2. Conditional statements in C++
+
+C++ supports:
+
+if/else
+else if (there is no elif)
+switch-case
+C++ doesn't have unique conditional statements like Perl's unless. It sticks to the standard use of if and else.
+
+3. Delimiting code blocks in C++
+
+Code blocks in C++ are delimited using curly braces {}. If a condition block contains only a single statement, the braces are optional but should be used for clarity and to prevent potential logical errors.
+
+4. Short-circuit evaluation in C++
+
+C++ uses short-circuit evaluation:
+
+&& (logical AND) short-circuits if the first condition is false.
+|| (logical OR) short-circuits if the first condition is true.
+
+
